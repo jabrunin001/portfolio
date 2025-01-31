@@ -64,7 +64,7 @@ const blogPosts = [
         title: 'Building Scalable Data Solutions',
         date: 'March 10, 2024',
         excerpt: 'A deep dive into creating scalable data architectures...',
-        image: 'assets/images/blog/scalable-data.jpg',
+        image: '',
         link: '/blog/scalable-data'
     }
 ];
