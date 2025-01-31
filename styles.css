@@ -252,4 +252,73 @@ footer {
 
 .btn.accent:hover {
     background-color: var(--primary-color);
+}
+
+/* Add this to your styles.css */
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-text p {
+    text-align: justify;
+    padding: 1rem;
+    background: var(--accent-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Enhanced Skills List Styling */
+.skill-category {
+    background: var(--bg-color);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+}
+
+.skill-category h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+}
+
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-category li {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+    background: var(--accent-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.skill-category li:before {
+    content: "▹";
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+.skill-category li:hover {
+    transform: translateX(5px);
+    background: var(--primary-color);
+    color: var(--bg-color);
 } 

@@ -115,7 +115,9 @@ function populateSkills() {
         div.innerHTML = `
             <h3>${category.category}</h3>
             <ul>
-                ${category.items.map(skill => `<li>${skill}</li>`).join('')}
+                ${category.items.map(skill => `
+                    <li>${skill}</li>
+                `).join('')}
             </ul>
         `;
         skillsGrid.appendChild(div);
