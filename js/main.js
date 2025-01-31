@@ -57,14 +57,14 @@ const blogPosts = [
         title: 'From Chaos to Clarity: How We Transformed University Data with Azure Pipelines',
         date: 'January 31, 2025',
         excerpt: 'When I took on the challenge of modernizing our university\'s data infrastructure...',
-        image: '/Users/jamesbruning/Scala Project/Blogpost1.webp',
+        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop',
         link: 'https://medium.com/@username/from-chaos-to-clarity'
     },
     {
         title: 'Building Scalable Data Solutions',
         date: 'March 10, 2024',
         excerpt: 'A deep dive into creating scalable data architectures...',
-        image: '',
+        image: 'https://images.unsplash.com/photo-1520085601670-ee14aa5fa3e8?q=80&w=2070&auto=format&fit=crop',
         link: '/blog/scalable-data'
     }
 ];
