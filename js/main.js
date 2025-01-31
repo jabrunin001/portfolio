@@ -17,7 +17,7 @@ const experiences = [
 const skills = [
     {
         category: "Programming Languages",
-        items: ["Python", "SQL", "R", "JavaScript", "HTML/CSS"]
+        items: ["Python", "SQL", "R", "JavaScript", "HTML/CSS","Go"]
     },
     {
         category: "Data Engineering",
@@ -57,7 +57,7 @@ const blogPosts = [
         title: 'From Chaos to Clarity: How We Transformed University Data with Azure Pipelines',
         date: 'January 31, 2025',
         excerpt: 'When I took on the challenge of modernizing our university\'s data infrastructure...',
-        image: 'assets/images/blog/data-pipeline.webp',
+        image: '/Users/jamesbruning/Scala Project/Blogpost1.webp',
         link: 'https://medium.com/@username/from-chaos-to-clarity'
     },
     {
