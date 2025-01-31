@@ -11,10 +11,29 @@ const experiences = [
 
 const skills = [
     {
-        category: 'Technical Skills',
-        items: ['Python', 'SQL', 'Tableau', 'Machine Learning', 'Data Visualization', 'Data Integration', 'Data Security', 'Data Governance', 'Data Warehousing', 'Data Modeling', 'Data Architecture', 'Data Quality', 'Data Reporting', 'Data Analytics', 'Data Science', 'Data Engineering', 'Data Analytics Tools', 'Data Visualization Tools', 'Data Integration Tools', 'Data Security Tools', 'Data Warehousing Tools', 'Data Modeling Tools', 'Data Architecture Tools', 'Data Quality Tools', 'Data Reporting Tools', 'Data Analytics Tools', 'Data Science Tools', 'Data Engineering Tools']
+        category: "Programming Languages",
+        items: ["Python", "SQL", "R", "JavaScript", "HTML/CSS"]
     },
-    // Add more skill categories
+    {
+        category: "Data Analysis & Visualization",
+        items: ["Tableau", "Power BI", "Matplotlib", "Seaborn", "D3.js"]
+    },
+    {
+        category: "Machine Learning & Statistics",
+        items: ["Scikit-learn", "TensorFlow", "Statistical Analysis", "Regression Models", "Classification Algorithms"]
+    },
+    {
+        category: "Database Technologies",
+        items: ["MySQL", "PostgreSQL", "MongoDB", "Data Warehousing", "ETL Processes"]
+    },
+    {
+        category: "Cloud & DevOps",
+        items: ["AWS", "Docker", "Git", "CI/CD", "Cloud Computing"]
+    },
+    {
+        category: "Business Intelligence",
+        items: ["Data Strategy", "KPI Development", "Business Analytics", "Report Automation", "Dashboard Design"]
+    }
 ];
 
 const projects = [
@@ -32,7 +51,7 @@ const blogPosts = [
         title: 'From Chaos to Clarity: How We Transformed University Data with Azure Pipelines',
         date: 'January 31, 2025',
         excerpt: 'When I took on the challenge of modernizing our university\'s data infrastructure, we faced a maze of 20 different data sources and three departments struggling to track their metrics effectively. Through careful implementation of Azure Pipelines and a comprehensive data warehouse solution, we transformed this fragmented landscape into a unified, real-time analytics powerhouse. Our journey not only reduced report generation time from 3 days to 30 minutes but also improved staff productivity by 25%. This is the story of how we turned data chaos into clarity, and the valuable lessons we learned along the way.',
-        image: 'assets/blog-1.jpg',
+        image: '/Users/jamesbruning/Scala Project/DALL·E 2025-01-31 14.10.35 - A futuristic data pipeline visualization showing a chaotic web of multiple data sources on the left, smoothly transitioning into a structured, central.webp',
         link: 'https://medium.com/@zcfmvsm/from-chaos-to-clarity-how-we-transformed-university-data-with-azure-pipelines-6c7a9c27736c'
     },
     {
@@ -113,8 +132,11 @@ function populateSkills() {
         const div = document.createElement('div');
         div.className = 'skill-category';
         div.innerHTML = `
-            <h3>${category.category}</h3>
-            <ul>
+            <div class="skill-header" onclick="toggleSkillList(this)">
+                <h3>${category.category}</h3>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <ul class="skill-list collapsed">
                 ${category.items.map(skill => `
                     <li>${skill}</li>
                 `).join('')}
@@ -122,6 +144,13 @@ function populateSkills() {
         `;
         skillsGrid.appendChild(div);
     });
+}
+
+function toggleSkillList(header) {
+    const skillList = header.nextElementSibling;
+    skillList.classList.toggle('collapsed');
+    header.querySelector('i').classList.toggle('fa-chevron-up');
+    header.querySelector('i').classList.toggle('fa-chevron-down');
 }
 
 function populateProjects() {
