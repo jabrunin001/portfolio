@@ -1,10 +1,10 @@
 // Data for dynamic content
 const experiences = [
     {
-        title: 'Senior Position',
-        company: 'Company Name',
-        period: '2020 - Present',
-        description: 'Description of your role and achievements...'
+        title: 'Senior Research Data Analyst',
+        company: 'Northwestern University',
+        period: '2019 - Present',
+        description: 'Senior Research Data Analyst at Northwestern University leading enterprise-wide analytics initiatives for the Office of Research. Transformed operational efficiency by developing comprehensive executive dashboards that track over $4B in proposals and $1B in awards. Engineered a unified data platform integrating 12 distinct sources for employee metrics and resource allocation, maintaining 98% confidence interval accuracy. Implemented institution-wide row-level security system spanning 37 units, enabling secure, granular data access while fostering cross-departmental collaboration. Expertise in Tableau, SQL, and advanced data integration tools drives data-informed decision-making across the university\'s research operations.'
     },
     // Add more experiences
 ];
@@ -12,7 +12,7 @@ const experiences = [
 const skills = [
     {
         category: 'Technical Skills',
-        items: ['Skill 1', 'Skill 2', 'Skill 3']
+        items: ['Python', 'SQL', 'Tableau', 'Machine Learning', 'Data Visualization', 'Data Integration', 'Data Security', 'Data Governance', 'Data Warehousing', 'Data Modeling', 'Data Architecture', 'Data Quality', 'Data Reporting', 'Data Analytics', 'Data Science', 'Data Engineering', 'Data Analytics Tools', 'Data Visualization Tools', 'Data Integration Tools', 'Data Security Tools', 'Data Warehousing Tools', 'Data Modeling Tools', 'Data Architecture Tools', 'Data Quality Tools', 'Data Reporting Tools', 'Data Analytics Tools', 'Data Science Tools', 'Data Engineering Tools']
     },
     // Add more skill categories
 ];
@@ -29,11 +29,11 @@ const projects = [
 
 const blogPosts = [
     {
-        title: 'Blog Post Title 1',
-        date: 'March 15, 2024',
-        excerpt: 'This is a brief excerpt from the blog post that gives readers an idea of what the post is about...',
+        title: 'From Chaos to Clarity: How We Transformed University Data with Azure Pipelines',
+        date: 'January 31, 2025',
+        excerpt: 'When I took on the challenge of modernizing our university\'s data infrastructure, we faced a maze of 20 different data sources and three departments struggling to track their metrics effectively. Through careful implementation of Azure Pipelines and a comprehensive data warehouse solution, we transformed this fragmented landscape into a unified, real-time analytics powerhouse. Our journey not only reduced report generation time from 3 days to 30 minutes but also improved staff productivity by 25%. This is the story of how we turned data chaos into clarity, and the valuable lessons we learned along the way.',
         image: 'assets/blog-1.jpg',
-        link: '/blog/post-1'
+        link: 'https://medium.com/@zcfmvsm/from-chaos-to-clarity-how-we-transformed-university-data-with-azure-pipelines-6c7a9c27736c'
     },
     {
         title: 'Blog Post Title 2',
