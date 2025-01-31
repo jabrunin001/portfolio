@@ -17,23 +17,35 @@ const experiences = [
 const skills = [
     {
         category: "Programming Languages",
-        items: ["Python", "SQL", "R", "JavaScript", "HTML/CSS","Go"]
+        items: ["Python", "SQL", "R", "JavaScript", "HTML/CSS", "Go", "Java", "Scala"]
     },
     {
         category: "Data Engineering",
-        items: ["Azure Pipelines", "ETL", "Data Warehousing", "Apache Spark", "Databricks"]
+        items: ["Azure Pipelines", "ETL Processes", "Data Warehousing", "Apache Spark", "Databricks", "Airflow"]
     },
     {
-        category: "Cloud & Infrastructure",
-        items: ["AWS", "Azure", "Docker", "Kubernetes", "CI/CD"]
+        category: "Cloud Platforms",
+        items: ["AWS", "Azure", "Google Cloud Platform", "Cloud Architecture", "Serverless Computing"]
+    },
+    {
+        category: "DevOps & Infrastructure",
+        items: ["Docker", "Kubernetes", "CI/CD", "Jenkins", "Terraform", "Git"]
     },
     {
         category: "Analytics & Visualization",
-        items: ["Tableau", "Power BI", "D3.js", "Matplotlib", "Jupyter"]
+        items: ["Tableau", "Power BI", "D3.js", "Matplotlib", "Jupyter", "Plotly", "Seaborn"]
     },
     {
         category: "Database Technologies",
-        items: ["PostgreSQL", "MongoDB", "Redis", "Elasticsearch", "DynamoDB"]
+        items: ["PostgreSQL", "MongoDB", "Redis", "Elasticsearch", "DynamoDB", "Cassandra", "Neo4j"]
+    },
+    {
+        category: "Machine Learning & AI",
+        items: ["Scikit-learn", "TensorFlow", "PyTorch", "Natural Language Processing", "Computer Vision", "Deep Learning"]
+    },
+    {
+        category: "Business Intelligence",
+        items: ["Data Strategy", "KPI Development", "Business Analytics", "Report Automation", "Statistical Analysis", "Predictive Modeling"]
     }
 ];
 
