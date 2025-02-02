@@ -4,6 +4,9 @@
     --text-color: #1f2937;
     --bg-color: #ffffff;
     --accent-color: #f3f4f6;
+    --card-bg: rgba(255, 255, 255, 0.9);
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --border-color: rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
 }
 
@@ -14,6 +17,9 @@
     --text-color: #f3f4f6;
     --bg-color: #111827;
     --accent-color: #1f2937;
+    --card-bg: rgba(31, 41, 55, 0.9);
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --border-color: rgba(255, 255, 255, 0.1);
 }
 
 * {
@@ -28,15 +34,11 @@ body {
     color: var(--text-color);
     line-height: 1.6;
     min-height: 100vh;
-    background: 
-        linear-gradient(120deg, rgba(37, 99, 235, 0.05) 0%, rgba(255, 255, 255, 0.1) 100%),
-        repeating-linear-gradient(45deg, transparent 0, transparent 10px, rgba(37, 99, 235, 0.03) 10px, rgba(37, 99, 235, 0.03) 11px),
-        repeating-linear-gradient(-45deg, transparent 0, transparent 10px, rgba(37, 99, 235, 0.03) 10px, rgba(37, 99, 235, 0.03) 11px);
-    background-attachment: fixed;
-    position: relative;
+    background: var(--bg-color);
+    transition: var(--transition);
 }
 
-/* Add animated flowing data particles */
+/* Add data flow background */
 body::before {
     content: '';
     position: fixed;
@@ -46,15 +48,12 @@ body::before {
     height: 100%;
     pointer-events: none;
     background: 
-        radial-gradient(2px 2px at 40px 70px, #2563eb, rgba(0,0,0,0)),
-        radial-gradient(2px 2px at 20px 150px, #60a5fa, rgba(0,0,0,0)),
-        radial-gradient(2px 2px at 30px 250px, #2563eb, rgba(0,0,0,0)),
-        radial-gradient(2px 2px at 40px 350px, #60a5fa, rgba(0,0,0,0)),
-        radial-gradient(2px 2px at 50px 450px, #2563eb, rgba(0,0,0,0)),
-        radial-gradient(2px 2px at 60px 550px, #60a5fa, rgba(0,0,0,0));
+        radial-gradient(2px 2px at 40px 70px, var(--primary-color), transparent),
+        radial-gradient(2px 2px at 20px 150px, var(--secondary-color), transparent),
+        radial-gradient(2px 2px at 30px 250px, var(--primary-color), transparent);
     background-size: 600px 600px;
     animation: moveParticles 4s linear infinite;
-    opacity: 0.3;
+    opacity: 0.1;
 }
 
 /* Add subtle grid pattern */
@@ -93,14 +92,17 @@ body::after {
 }
 
 [data-theme="dark"] section {
-    background: var(--bg-color);
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 [data-theme="dark"] .blog-card {
-    background: var(--bg-color);
+    background: var(--card-bg);
     border-color: var(--accent-color);
 }
+
 @keyframes moveParticles {
     0% {
         background-position: 0 0;
@@ -116,7 +118,8 @@ body::after {
     top: 0;
     width: 100%;
     padding: 1rem 2rem;
-    background-color: var(--bg-color);
+    background-color: var(--card-bg);
+    backdrop-filter: blur(10px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
@@ -189,13 +192,14 @@ section {
     padding: 5rem 2rem;
     animation: fadeIn 0.8s ease-out;
     position: relative;
-    background: var(--bg-color);
+    background: var(--card-bg);
     backdrop-filter: blur(10px);
     border-radius: 16px;
     margin: 2rem auto;
     max-width: 1200px;
     padding: 3rem 2rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color);
 }
 
 h2 {
@@ -222,13 +226,14 @@ h2 {
 
 /* Update project card background */
 .project-card {
-    background: var(--bg-color);
-    border: 1px solid var(--accent-color);
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 1.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
+
 /* Contact Form */
 .contact-form {
     max-width: 600px;
@@ -244,9 +249,9 @@ h2 {
 .form-group textarea {
     width: 100%;
     padding: 0.8rem;
-    border: 2px solid var(--accent-color);
+    border: 1px solid var(--border-color);
     border-radius: 5px;
-    background: transparent;
+    background: var(--bg-color);
     color: var(--text-color);
     transition: var(--transition);
 }
@@ -277,7 +282,8 @@ h2 {
 footer {
     text-align: center;
     padding: 2rem;
-    background-color: var(--accent-color);
+    background-color: var(--card-bg);
+    color: var(--text-color);
 }
 
 /* Blog Section */
@@ -289,12 +295,12 @@ footer {
 }
 
 .blog-card {
-    background: var(--bg-color);
+    background: var(--card-bg);
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    border: 1px solid var(--accent-color);
+    border: 1px solid var(--border-color);
 }
 
 .blog-card:hover {
@@ -376,11 +382,12 @@ p {
 }
 
 .about-text {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--card-bg);
     padding: 2rem;
     border-radius: 16px;
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
 }
 
 .about-text p {
@@ -391,8 +398,8 @@ p {
 
 /* Enhanced Skills List Styling */
 .skill-category {
-    background: var(--bg-color);
-    border: 1px solid var(--accent-color);
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
     padding: 1.5rem;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -408,6 +415,7 @@ p {
     padding: 1rem;
     background: var(--accent-color);
     border-radius: 8px;
+    color: var(--text-color);
 }
 
 .skill-list {
@@ -428,6 +436,7 @@ p {
     transition: var(--transition);
     display: flex;
     align-items: center;
+    color: var(--text-color);
 }
 
 .skill-list li:before {

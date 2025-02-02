@@ -81,13 +81,13 @@ const blogPosts = [
     }
 ];
 
-// Theme toggling
-const themeToggle = document.querySelector('.theme-toggle');
-themeToggle?.addEventListener('click', () => {
-    document.body.dataset.theme = document.body.dataset.theme === 'dark' ? 'light' : 'dark';
-    themeToggle.querySelector('i').classList.toggle('fa-sun');
-    themeToggle.querySelector('i').classList.toggle('fa-moon');
-});
+// Theme handling
+function setTheme(theme) {
+    document.body.dataset.theme = theme;
+    localStorage.setItem('theme', theme);
+    const icon = document.querySelector('.theme-toggle i');
+    icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+}
 
 // Smooth scrolling for navigation
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -204,8 +204,19 @@ function populateBlog() {
     });
 }
 
-// Initialize all sections
+// Initialize theme
 document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    setTheme(savedTheme);
+    
+    // Theme toggle
+    const themeToggle = document.querySelector('.theme-toggle');
+    themeToggle?.addEventListener('click', () => {
+        const newTheme = document.body.dataset.theme === 'dark' ? 'light' : 'dark';
+        setTheme(newTheme);
+    });
+    
+    // Initialize sections
     try {
         populateTimeline();
         populateSkills();
