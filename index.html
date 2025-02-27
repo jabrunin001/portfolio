@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>James Bruning - Personal Website</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Header -->
@@ -53,19 +53,18 @@
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-container">
-                <div>
-                    <p>Data Science Professional | Strategic Analytics & Transformative Solutions
-                        
-                        As a Senior Research Data Analyst at Northwestern University, I specialize in translating complex data into actionable insights that drive organizational efficiency and strategic decision-making. My expertise spans advanced data integration, visualization, and security techniques, with a proven track record of developing high-impact analytical solutions.
+                <div class="about-text">
+                    <p>Data Science Professional | Strategic Analytics & Transformative Solutions</p>
+                    
+                    <p>As a Senior Research Data Analyst at Northwestern University, I specialize in translating complex data into actionable insights that drive organizational efficiency and strategic decision-making. My expertise spans advanced data integration, visualization, and security techniques, with a proven track record of developing high-impact analytical solutions.</p>
 
-My key strengths include advanced data analytics using Python, SQL, Tableau, and machine learning techniques. I am an expert in data integration from multiple sources, consistently achieving 98% confidence interval precision. I have developed executive-level dashboards handling over $4 billion in financial data and implemented row-level security solutions across 37 organizational units. Additionally, I am skilled in comprehensive data visualization and operational efficiency optimization.
+                    <p>My key strengths include advanced data analytics using Python, SQL, Tableau, and machine learning techniques. I am an expert in data integration from multiple sources, consistently achieving 98% confidence interval precision. I have developed executive-level dashboards handling over $4 billion in financial data and implemented row-level security solutions across 37 organizational units. Additionally, I am skilled in comprehensive data visualization and operational efficiency optimization.</p>
 
-Driven by a passion for solving real-world challenges through data-driven strategies, I leverage technical innovation to transform raw information into meaningful, strategic insights. My approach combines technical expertise with a collaborative mindset, consistently delivering solutions that enhance organizational performance and transparency.</p>
-                </div></p>
+                    <p>Driven by a passion for solving real-world challenges through data-driven strategies, I leverage technical innovation to transform raw information into meaningful, strategic insights. My approach combines technical expertise with a collaborative mindset, consistently delivering solutions that enhance organizational performance and transparency.</p>
+                    
                     <p>When I'm not coding, you can find me creating content, writing blog posts about tech and design, or exploring the great outdoors. I'm always looking to learn new technologies and improve my skills.</p>
-                    <p>I believe in creating user-centric designs that not only look great but also provide an excellent user experience. My goal is to build websites that are fast, responsive, and accessible to everyone.</p>
                 </div>
-                <div>
+                <div class="about-image-container">
                     <img src="/api/placeholder/500/500" alt="Profile Photo" class="about-image">
                 </div>
             </div>
@@ -77,8 +76,7 @@ Driven by a passion for solving real-world challenges through data-driven strate
         <div class="container">
             <h2 class="section-title">My Experience</h2>
             <div class="timeline">
-                <!-- Timeline items from original file -->
-                <!-- ... -->
+                <!-- Will be populated by JavaScript -->
             </div>
         </div>
     </section>
@@ -88,8 +86,7 @@ Driven by a passion for solving real-world challenges through data-driven strate
         <div class="container">
             <h2 class="section-title">My Skills</h2>
             <div class="skills-container">
-                <!-- Skill categories from original file -->
-                <!-- ... -->
+                <!-- Will be populated by JavaScript -->
             </div>
         </div>
     </section>
@@ -99,8 +96,7 @@ Driven by a passion for solving real-world challenges through data-driven strate
         <div class="container">
             <h2 class="section-title">My Projects</h2>
             <div class="projects-grid">
-                <!-- Project cards from original file -->
-                <!-- ... -->
+                <!-- Will be populated by JavaScript -->
             </div>
         </div>
     </section>
@@ -110,8 +106,7 @@ Driven by a passion for solving real-world challenges through data-driven strate
         <div class="container">
             <h2 class="section-title">Latest Blog Posts</h2>
             <div class="blog-posts">
-                <!-- Blog cards from original file -->
-                <!-- ... -->
+                <!-- Will be populated by JavaScript -->
             </div>
         </div>
     </section>
@@ -121,8 +116,54 @@ Driven by a passion for solving real-world challenges through data-driven strate
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
             <div class="contact-container">
-                <!-- Contact info and form from original file -->
-                <!-- ... -->
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>james@example.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+1 (123) 456-7890</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Chicago, IL</p>
+                        </div>
+                    </div>
+                </div>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
             </div>
         </div>
     </section>
@@ -139,6 +180,6 @@ Driven by a passion for solving real-world challenges through data-driven strate
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
