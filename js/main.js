@@ -242,18 +242,18 @@ const projects = [
 
 const blogPosts = [
     {
-        title: 'From Chaos to Clarity: How We Transformed University Data with Azure Pipelines',
-        date: 'January 31, 2025',
-        excerpt: 'When I took on the challenge of modernizing our university\'s data infrastructure...',
-        image: '/api/placeholder/600/400', // Using placeholder instead of remote URL
-        link: 'https://medium.com/@username/from-chaos-to-clarity'
+        title: 'Predicting Hospital Readmissions: What 10 Years of Diabetes Data Really Tells Us',
+        date: 'March 15, 2024',
+        excerpt: 'A deep dive into analyzing diabetes patient data to predict and prevent hospital readmissions...',
+        image: 'https://source.unsplash.com/random/600x400/?medical,hospital',
+        link: 'https://medium.com/@zcfmvsm/predicting-hospital-readmissions-what-10-years-of-diabetes-data-really-tells-us-27e2f375b785'
     },
     {
-        title: 'Building Scalable Data Solutions',
+        title: 'From Chaos to Clarity: How We Transformed University Data with Azure Pipelines',
         date: 'March 10, 2024',
-        excerpt: 'A deep dive into creating scalable data architectures...',
-        image: '/api/placeholder/600/400', // Using placeholder instead of remote URL
-        link: '/blog/scalable-data'
+        excerpt: 'When I took on the challenge of modernizing our university\'s data infrastructure...',
+        image: 'https://source.unsplash.com/random/600x400/?data,technology',
+        link: 'https://medium.com/@zcfmvsm/from-chaos-to-clarity-how-we-transformed-university-data-with-azure-pipelines-6c7a9c27736c'
     }
 ];
 
