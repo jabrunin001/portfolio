@@ -76,6 +76,7 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
+    padding-top: 80px;
 }
 
 section {
@@ -87,7 +88,7 @@ h1, h2, h3 {
 }
 
 .hero {
-    height: 100vh;
+    min-height: calc(100vh - 80px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -95,6 +96,8 @@ h1, h2, h3 {
     text-align: center;
     position: relative;
     overflow: hidden;
+    margin-top: -80px;
+    padding-top: 80px;
 }
 
 .hero-image {
