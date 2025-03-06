@@ -3,6 +3,7 @@
     --secondary-color: #2ecc71;
     --text-color: #333;
     --background-color: #fff;
+    --background-color-rgb: 255, 255, 255;
     --accent-color: #e74c3c;
     --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -11,6 +12,7 @@
 .dark-mode {
     --text-color: #f0f0f0;
     --background-color: #222;
+    --background-color-rgb: 34, 34, 34;
 }
 
 * {
@@ -43,13 +45,14 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: var(--background-color);
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -95,6 +98,7 @@ h1, h2, h3 {
     align-items: center;
     position: relative;
     padding-top: 80px;
+    overflow: hidden;
 }
 
 .hero-content {
@@ -105,9 +109,11 @@ h1, h2, h3 {
     text-align: center;
     z-index: 2;
     padding: 2rem;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(var(--background-color-rgb), 0.9);
     border-radius: 10px;
     backdrop-filter: blur(5px);
+    margin: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .hero-image {
@@ -237,14 +243,17 @@ h1, h2, h3 {
 }
 
 .blog-post {
-    background-color: #f0f0f0;
+    background-color: var(--background-color);
+    border: 1px solid rgba(128, 128, 128, 0.2);
     border-radius: 10px;
     overflow: hidden;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .blog-post:hover {
     transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .blog-post img {
@@ -255,10 +264,12 @@ h1, h2, h3 {
 
 .blog-post h3 {
     padding: 1rem;
+    color: var(--text-color);
 }
 
 .blog-post p {
     padding: 0 1rem 1rem;
+    color: var(--text-color);
 }
 
 .read-more {
@@ -388,4 +399,48 @@ footer {
 
 body:hover .custom-cursor {
     transform: scale(1.5);
+}
+
+#theme-toggle-btn {
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--primary-color);
+    background-color: transparent;
+    color: var(--text-color);
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#theme-toggle-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+/* Add this to your dark mode section */
+.dark-mode header {
+    background-color: var(--background-color);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode #theme-toggle-btn {
+    border-color: var(--secondary-color);
+}
+
+.dark-mode #theme-toggle-btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+}
+
+/* Update dark mode specific styles */
+.dark-mode .blog-post {
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .blog-post:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
