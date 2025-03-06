@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <header>
@@ -129,23 +130,33 @@
             <a href="https://medium.com/@zcfmvsm" class="read-more" target="_blank">View All Posts</a>
         </section>
 
-        <section id="contact">
+        <section id="contact" class="contact-section">
             <h2>Get in Touch</h2>
             <form action="https://formspree.io/f/moveaeoe" method="POST" class="contact-form">
                 <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
                     <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
                 </div>
                 <div class="form-group">
                     <label for="message">Your Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <textarea id="message" name="message" rows="5" placeholder="What would you like to discuss?" required></textarea>
                 </div>
                 <button type="submit" class="submit-btn">Send Message</button>
             </form>
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/jtb96/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a href="https://medium.com/@zcfmvsm" target="_blank" rel="noopener noreferrer">Medium</a>
-                <a href="https://github.com/jabrunin001" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/jtb96/" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://medium.com/@zcfmvsm" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <i class="fab fa-medium"></i> Medium
+                </a>
+                <a href="https://github.com/jabrunin001" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
             </div>
         </section>
     </main>
