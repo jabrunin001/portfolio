@@ -131,22 +131,17 @@
 
         <section id="contact">
             <h2>Get in Touch</h2>
-<!-- modify this form HTML and place wherever you want your form -->
-<form
-  action="https://formspree.io/f/moveaeoe"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
-</form>
+            <form action="https://formspree.io/f/moveaeoe" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/jtb96/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 <a href="https://medium.com/@zcfmvsm" target="_blank" rel="noopener noreferrer">Medium</a>
